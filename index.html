@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  background-color: #585858;
+}
+p {
+  text-align: center;
+  font-size: 60px;
+  align: center;
+  margin-top: 45vh;
+  color: #eeeeee;
+  font: Veranda;
+}
+</style>
+</head>
+<body>
+
+<p id="TIMER"></p>
+
+<script>
+var countDownDate = new Date("Feb 20, 2018 22:00:00").getTime();
+
+var x = setInterval(function() {
+
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var hours = Math.floor((distance % 8640000) / 3600000);
+    var minutes = Math.floor((distance % 3600000) / 60000);
+    var seconds = Math.floor((distance % 60000) / 1000);
+    
+    document.getElementById("TIMER").innerHTML = hours + "h "
+    + minutes + "m " + seconds + "s ";
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("TIMER").innerHTML = "The 2018 Programming Puzzles & Code Golf election has begun!";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>

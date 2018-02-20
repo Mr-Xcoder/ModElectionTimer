@@ -22,17 +22,13 @@ p {
 
 <script>
 var countDownDate = new Date("Feb 20, 2018 22:00:00").getTime();
-
 var x = setInterval(function() {
-
     var now = new Date().getTime();
     var distance = countDownDate - now;
-    var hours = Math.floor((distance % 8640000) / 3600000);
     var minutes = Math.floor((distance % 3600000) / 60000);
     var seconds = Math.floor((distance % 60000) / 1000);
     
-    document.getElementById("TIMER").innerHTML = hours + "h "
-    + minutes + "m " + seconds + "s ";
+    document.getElementById("TIMER").innerHTML = minutes + "m " + seconds + "s ";
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("TIMER").innerHTML = "The 2018 Programming Puzzles & Code Golf election has begun!";

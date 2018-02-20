@@ -6,19 +6,21 @@
 body{
   background-color: #585858;
 }
-p {
-  text-align: center;
-  font-size: 60px;
-  align: center;
-  margin-top: 45vh;
-  color: #eeeeee;
-  font: Veranda;
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #e78e87;
+}
+a:hover, a:active {
+  color: #f94f88;
 }
 </style>
 </head>
 <body>
 
-<p id="TIMER"></p>
+<p id="TIMER" style="text-align: center; font-size: 60px; align: center; margin-top: 45vh; color: #eeeeee;"></p>
+
+<p style="position: fixed; bottom: 5px; left: 20px; color: #eeeeee;">This is a timer for the <a href="https://codegolf.stackexchange.com/election/2">2018 PPCG Moderator election</a></p>
 
 <script>
 var countDownDate = new Date("Feb 20, 2018 22:00:00").getTime();
